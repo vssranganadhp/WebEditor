@@ -1,0 +1,30 @@
+.wa {
+    left: 4%; width: 92%; top: 5%; z-index: 1002; color: white; position: fixed; text-align: center; font-family: arial,sans-serif; font-weight: bold; background: #222 none repeat scroll 0; overflow: hidden;
+}
+.wc {
+    padding: 1em;
+}
+.cf.wf {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tl {
+    font-size: 100%; white-space: nowrap; text-align: left; outline: none;
+}
+.Dp {
+    padding-bottom: .8ex;
+}
+.wj.Dp {
+    color: #DD0; text-align: right;
+}
+.wi {
+    cursor: pointer; text-decoration: underline; color: #DD0;
+}
+.aNP.dOsDob {
+    outline: none; overflow-y: auto; 
+}
+.cf.wd.aNO {
+    border-top: 1px solid #999; font-size: 80%;
+    width: 100%;
+    margin: 0 0 8px 0;
+}

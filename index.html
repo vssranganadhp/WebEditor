@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web Editor RTCE</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="CodeMirror/lib/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css?v1" />
+    <link rel="stylesheet" type="text/css" href="style/devTools.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/addon/dialog/dialog.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/addon/hint/show-hint.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/addon/search/matchesonscrollbar.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/addon/scroll/simplescrollbars.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/addon/display/fullscreen.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/addon/fold/foldgutter.css" />
+    <link rel="stylesheet" type="text/css" href="style/jquery.mCustomScrollbar.css" />
+    
+    <!--THEMES-->
+    <!--link rel="stylesheet" type="text/css" href="CodeMirror/theme/3024-day.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/3024-night.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/ambiance-mobile.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/ambiance.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/base16-dark.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/base16-light.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/blackboard.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/cobalt.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/colorforth.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/eclipse.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/elegant.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/erlang-dark.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/lesser-dark.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/mbo.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/mdn-like.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/midnight.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/monokai.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/neat.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/neo.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/night.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/paraiso-dark.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/paraiso-light.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/pastel-on-dark.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/rubyblue.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/solarized.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/the-matrix.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/tomorrow-night-bright.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/tomorrow-night-eighties.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/twilight.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/vibrant-ink.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/xq-dark.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/xq-light.css" />
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/zenburn.css" /-->
+    <link rel="stylesheet" type="text/css" href="CodeMirror/theme/all_themes.css" />
+    
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="CodeMirror/lib/codemirror.js"></script>
+    <!--MODE-->
+    <script type="text/javascript" src="CodeMirror/addon/mode/loadmode.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/mode/meta.js"></script>
+
+    <!--HINT-->
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/anyword-hint.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/css-hint.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/html-hint.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/php-hint.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/javascript-hint.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/show-hint.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/sql-hint.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/hint/xml-hint.js"></script>
+
+    <!--EDIT-->
+    <script type="text/javascript" defer src="CodeMirror/addon/edit/closebrackets.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/edit/closetag.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/edit/continuelist.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/edit/matchbrackets.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/edit/matchtags.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/edit/trailingspace.js"></script>
+
+    <!--SEARCH-->
+    <script type="text/javascript" defer src="CodeMirror/addon/search/match-highlighter.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/search/matchesonscrollbar.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/search/search.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/search/searchcursor.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/dialog/dialog.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/search/goto-line.js"></script>
+
+    <!--SCROLL-->
+    <script type="text/javascript" defer src="CodeMirror/addon/scroll/annotatescrollbar.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/scroll/scrollpastend.js"></script>
+    <script type="text/javascript" src="CodeMirror/addon/scroll/simplescrollbars.js"></script>
+
+    <!--SELECTION-->
+    <script type="text/javascript" defer src="CodeMirror/addon/selection/active-line.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/selection/mark-selection.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/selection/selection-pointer.js"></script>
+
+    <!--COMMENT-->
+    <script type="text/javascript" defer src="CodeMirror/addon/comment/comment.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/comment/continuecomment.js"></script>
+
+    <!--DISPLAY-->
+    <script type="text/javascript" defer src="CodeMirror/addon/display/fullscreen.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/display/panel.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/display/placeholder.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/display/rulers.js"></script>
+
+    <!--FOLD-->
+    <script type="text/javascript" defer src="CodeMirror/addon/fold/brace-fold.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/fold/comment-fold.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/fold/foldcode.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/fold/foldgutter.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/fold/indent-fold.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/fold/markdown-fold.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/addon/fold/xml-fold.js"></script>
+    <!--KEYMAP-->
+    <script type="text/javascript" defer src="CodeMirror/keymap/emacs.js"></script>
+    <script type="text/javascript" src="CodeMirror/keymap/sublime.js"></script>
+    <script type="text/javascript" defer src="CodeMirror/keymap/vim.js"></script>
+
+    <script type="text/javascript" src="js/Mousetrap.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript" src="js/bind_keys.js"></script>
+    <script type="text/javascript" src="js/WebEditor.js"></script>
+    <script type="text/javascript" src="file/FileSystem.js"></script>
+</head>
+<body>
+    <div id="editor_section">
+        <div id="google_search" title="Click to search in google">
+            <div class="google_header"></div>
+            <gcse:search></gcse:search>
+        </div>
+        <div id="topMenu">
+            
+        </div>
+        <div id="project_nav">
+            <div class="search_div">
+                <input type="text" id="file_search" placeholder="Search file" />
+            </div>
+            <ul></ul>
+            <div class="directory"></div>
+        </div>
+        <div id="seperator"></div>
+        <div id="page_editor">
+            <div class="head">
+                <p>
+                    <tt class="fname"></tt>
+                    <span>Select a theme: </span>
+                    <select onchange="selectTheme(this.value)" id="select"><option selected>default</option><option>3024-day</option><option>3024-night</option><option>ambiance</option><option>base16-dark</option><option>base16-light</option><option>blackboard</option><option>cobalt</option><option>colorforth</option><option>eclipse</option><option>elegant</option><option>erlang-dark</option><option>lesser-dark</option><option>mbo</option><option>mdn-like</option><option>midnight</option><option>monokai</option><option>neat</option><option>neo</option><option>night</option><option>paraiso-dark</option><option>paraiso-light</option><option>pastel-on-dark</option><option>rubyblue</option><option>solarized dark</option><option>solarized light</option><option>the-matrix</option><option>tomorrow-night-bright</option><option>tomorrow-night-eighties</option><option>twilight</option><option>vibrant-ink</option><option>xq-dark</option><option>xq-light</option><option>zenburn</option></select>
+                </p>
+            </div>
+            <textarea id="code" name="code"></textarea>
+            <img id="image_file" src="" />
+            <div id="bottom_nav"></div>
+        </div>
+        <div id="right_scroll_preview" hidden>
+            <canvas id="preview_can"></canvas>
+            <img id="preview_scroll" width="200" src="" />
+        </div>
+        <div class="soft-context-menu-glass-pane" tabindex="0" id="menu_cont">
+            <div class="soft-context-menu" tabindex="0" id="contextmenu">
+                <div class="soft-context-menu-item" data-item="createNewFile"><span>New File</span><span>⌘K</span></div>
+                <div class="soft-context-menu-item" data-item="createNewDirectory"><span>New Directory</span><span>⌘L</span></div>
+                <div class="soft-context-menu-separator"><div class="separator-line"></div></div>
+                <div class="soft-context-menu-item" data-item="wordWrap"><span class="soft-context-menu-item-checkmark">✓ </span>Word Wrap</div>
+            </div>
+        </div>
+        <progress max="42"></progress>
+        <div class="help">
+            <p>Keyboard shortcuts</p>
+            <hr>
+        </div>
+        <div id="loading">
+            <div></div>
+            <img src="images/loading.gif" width="20" height="20" />
+            <span>Loading files<br/><span id="log_file_name"></span></span>
+        </div>
+        <div id="chat_container">
+            <div class="header">Group chat</div>
+            <div id="chat_members"></div>
+            <div id="chat_form">
+                <div id="chat_messages"></div>
+                <div>
+                    <form onsubmit="sendTextMessage();return false;">
+                        <input type="text" autocomplete="false" spellcheck="false" id="message_text" placeholder="Enter text to send" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page_preview">
+        <button id="open_new_tab">Open in new tab</button>
+        <iframe id="frame" src=""></iframe>
+    </div>
+</body>
+</html>

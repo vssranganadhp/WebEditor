@@ -1,0 +1,37 @@
+{
+    "File":{
+        "New File":"⌘K",
+        "Open":"⌘O",
+        "Open Recent":["test.txt","test1.html","example.py"],
+        "Save":"⌘S"
+    },
+    "Edit":{
+        "Undo":"⌘Z",
+        "Redo":"⌘⇧Z",
+        "seperator1":"seperator",
+        "Cut":"⌘X",
+        "Copy":"⌘C",
+        "Paste":"⌘V"
+    },
+    "Find":{
+        "Find":"⌘F",
+        "Find Next":"⌘G",
+        "Find Previous":"⌘⇧G"
+    },
+    "View":{
+        "Preview":"⌘P"
+    },
+    "Navigate":{
+        
+    },
+    "Debug":{
+        
+    },
+    "Window":{
+        "Fullscreen":"⌘F11"
+    },
+    "Help":{
+        "Report an issue..":"Mail",
+        "WebEditor Help":"F1"
+    }
+}

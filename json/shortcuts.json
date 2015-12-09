@@ -1,0 +1,43 @@
+{
+    "Normal":{
+            "F1 or <Shift> + /" : "Help",
+            "<⌘> + F11":"Full screen editor",
+            "<⌘> + K":"New window",
+            "<⌘> + P":"Show Preview",
+            "<Alt> + F":"Toggle menu selection"
+    },
+    "Editor":{
+        "<⌘> + E":"Quick edit",
+        "<⌘> + R":"Reload editor",
+        "<⌘> + Y or <⌘> + <Shift> + Z":"Redo",
+        "<⌘> + A":"Select all",
+        "<⌘> + S":"Save selected file",
+        "<⌘> + Z":"Undo",
+        "<⌘> + X":"Cut",
+        "<⌘> + C":"Copy",
+        "<⌘> + V":"Paste",
+        "<⌘> + F":"Find",
+        "<⌘> + G":"Find next word",
+        "<⌘> + <Shift> + G":"Find previous word",
+        "<⌘> + <Alt> + f":"Replace word",
+        "<⌘> + <Shift> + <Alt> + f":"Replace all",
+        "<⌘> + [":"Indent Left",
+        "<⌘> + ]":"Indent Right",
+        "<⌘> + /":"Comment selection",
+        "<⌘> + i":"Auto indent",
+        "<⌘> + 1":"Switch theme to ambiance",
+        "<⌘> + 2":"Switch theme to blackboard",
+        "<⌘> + 3":"Switch theme to cobalt",
+        "<⌘> + 4":"Switch theme to eclipse",
+        "<⌘> + 5":"Switch theme to elegant",
+        "<⌘> + 6":"Switch theme to erlang-dark",
+        "<⌘> + 7":"Switch theme to lesser-dark",
+        "<⌘> + 8":"Switch theme to monokai",
+        "<⌘> + 9":"Switch theme to neat",
+        "<⌘> + 0":"Switch theme to night",
+        "<⌘> + -":"Switch theme to rubyblue",
+        "<⌘> + +":"Switch theme to vibrant-ink",
+        "<⌘> + ⌫":"Switch theme to xq-dark",
+        "<Ctrl> + d":"Remove current line in editor"
+    }
+}
