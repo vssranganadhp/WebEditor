@@ -236,10 +236,10 @@ $(document).ready(function(){
 });
 
 function loadModesAndShortcuts(){
-    $.get('predefined_methods.php',function(data){
-        phpTags = JSON.parse(data);
-        phpTags.internal.sort();
-        Log("PHP methods loaded");
+    // $.get('predefined_methods.php',function(data){
+    //     phpTags = JSON.parse(data);
+    //     phpTags.internal.sort();
+    //     Log("PHP methods loaded");
         $.get('json/shortcuts.json',function(data){
             if(typeof data === 'object'){
                 shortcuts = data;
@@ -275,7 +275,7 @@ function loadModesAndShortcuts(){
                 });
             });
         });
-    });
+    // });
 }
 
 function selectTheme(theme) {
